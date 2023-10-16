@@ -1,0 +1,85 @@
+1. What are your favorite books? You can make a database table to store them in!
+In this first step, create a table to store your list of books. It should have columns for id, name, and rating.
+
+(Answer)
+
+CREATE TABLE Books (id INTEGER PRIMARY KEY, name TEXT, rating INTEGER );
+
+INSERT INTO Books VALUES (1, "I Will Greet The Sun Again", 9);
+
+INSERT INTO Books VALUES (2, "The Red Queen", 8.67);
+
+INSERT INTO Books VALUES (3, "Verity", 9.43);
+
+2. Now, add a second query after the first, that retrieves only the movies that were released in the year 2000 or later, not before. Sort the results so that the earlier movies are listed first. You should have 2 SELECT statements after this step.
+
+(Answer)
+
+CREATE TABLE movies (id INTEGER PRIMARY KEY, name TEXT, release_year INTEGER);
+INSERT INTO movies VALUES (1, "Avatar", 2009);
+INSERT INTO movies VALUES (2, "Titanic", 1997);
+INSERT INTO movies VALUES (3, "Star Wars: Episode IV - A New Hope", 1977);
+INSERT INTO movies VALUES (4, "Shrek 2", 2004);
+INSERT INTO movies VALUES (5, "The Lion King", 1994);
+INSERT INTO movies VALUES (6, "Disney's Up", 2009);
+ 
+SELECT * FROM movies;
+
+SELECT * FROM movies
+WHERE release_year > "2000" ORDER BY release_year;
+
+3. Here's a table containing a TODO list with the number of minutes it will take to complete each item. 
+Insert another item to your todo list with the estimated minutes it will take.
+
+(Answer)
+
+CREATE TABLE todo_list (id INTEGER PRIMARY KEY, item TEXT, minutes INTEGER);
+INSERT INTO todo_list VALUES (1, "Wash the dishes", 15);
+INSERT INTO todo_list VALUES (2, "vacuuming", 20);
+INSERT INTO todo_list VALUES (3, "Learn some stuff on KA", 30);
+
+INSERT INTO todo_list VALUES (4, "Learn SQL", 45);
+SELECT SUM(minutes) FROM todo_list 
+
+BIG PROJECT ------------------------------------------------
+
+Create your own store! Your store should sell one type of things, like clothing or bikes, whatever you want your store to specialize in. 
+You should have a table for all the items in your store, and at least 5 columns for the kind of data you think you'd need to store.
+You should sell at least 15 items, and use select statements to order your items by price and show at least one statistic about the items.
+
+(Answer)
+
+CREATE table Grocery_Store (ID INTEGER PRIMARY KEY, Name TEXT, Price INTEGER, Category TEXT, Health_rating INTEGER);
+
+INSERT INTO Grocery_Store VALUES (1, "Milk", 3, "Dairy", 5);
+INSERT INTO Grocery_Store VALUES (2, "Broccoli", 1, "Produce", 5);
+INSERT INTO Grocery_Store VALUES (3, "Chocolate Bar", 4.99, "Snacks", 2);
+INSERT INTO Grocery_Store VALUES (4, "Chips", 3.99, "Snacks", 1);
+INSERT INTO Grocery_Store VALUES (5, "Butter", 1.99, "Dairy", 3);
+INSERT INTO Grocery_Store VALUES (6, "Apple", 0.5, "Fruit", 4);
+INSERT INTO Grocery_Store VALUES (7, "Juice", 4.99, "Drinks", 2);
+INSERT INTO Grocery_Store VALUES (8, "Frozen pizza", 12.99, "Freezer", 1);
+INSERT INTO Grocery_Store VALUES (9, "Fish", 24.99, "Seafood", 5);
+INSERT INTO Grocery_Store VALUES (10, "Stock", 3, "Pantry", 5);
+INSERT INTO Grocery_Store VALUES (11, "Cheese", 6.99, "Dairy", 5);
+INSERT INTO Grocery_Store VALUES (12, "Rice", 7.65, "Pantry", 5);
+INSERT INTO Grocery_Store VALUES (13, "Pasta", 2.55, "Pantry", 5);
+INSERT INTO Grocery_Store VALUES (14, "Cat Food", 29.99, "Pet Food", 5);
+INSERT INTO Grocery_Store VALUES (15, "Onions", 3, "Produce", 5);
+
+SELECT * FROM Grocery_Store;
+
+SELECT * FROM Grocery_Store
+
+WHERE price ORDER BY Price ASC;
+
+
+
+
+
+
+
+
+
+
+
